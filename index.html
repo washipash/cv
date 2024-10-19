@@ -3,43 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>PORTAFOLIO</title>
 </head>
 <body>
-    <div class="flex grid-cols-2"  >
-        <div class="flex-1 h-lvh bg-gray-500 w-1/3 sticky righ-0">
-            <img src="" alt="" class="rounded-full">
-            <div class="text-center">
-                <h1 class="">OSMEL JESUS ALVAREZ VILLASMIL</h1>
-                <h2>edad: 23 años</h2>
-                <h2>nacinalidad: venezuela</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-8">
+        <!-- Contenedor principal -->
+        <div class="lg:col-span-2 h-auto lg:h-[100vh] bg-sky-950 sticky top-0 flex flex-col lg:flex-col lg:justify-between z-50 w-full lg:w-auto text-white">
+            <!-- Imagen (se verá en fila con los botones en pantallas pequeñas, y en columna en pantallas grandes) -->
+            <div class="flex flex-col lg:flex-col lg:items-center lg:space-y-8">
+                <div class="flex justify-center lg:block">
+                    <img src="./img/yo.jpg" alt="" class="rounded-full h-28 w-28 object-cover">
+                </div>
+                <!-- Información personal (oculta en pantallas pequeñas) -->
+                <div class="text-center hidden lg:block p-4">
+                    <h1 class="">OSMEL JESUS ALVAREZ VILLASMIL</h1>
+                </div>
+                <!-- Menú de navegación (en columna en pantallas grandes y en fila en pantallas pequeñas) -->
+                <div class="flex flex-wrap justify-center lg:flex-col items-center space-x-4 lg:space-x-0 lg:space-y-4 mt-4 lg:mt-8">
+                    <ul class="flex lg:flex-col space-x-4 lg:space-x-0 lg:space-y-4">
+                        <li>
+                            <button class="w-24 bg-blue-500 rounded-full hover:bg-blue-600 text-center">
+                                <a href="#yo">Yo</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="w-24 bg-blue-500 rounded-full hover:bg-blue-600 text-center">
+                                <a href="#estudios">Estudios</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="w-24 bg-blue-500 rounded-full hover:bg-blue-600 text-center">
+                                <a href="#habilidades">Habilidades</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="w-24 bg-blue-500 rounded-full hover:bg-blue-600 text-center">
+                                <a href="#proyectos">Proyectos</a>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="w-24 bg-blue-500 rounded-full hover:bg-blue-600 text-center">
+                                <a href="#contacto">Contacto</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="">
-                <ul>
-                    <li><button class="w-24 bg-blue-500 rounded-full hover:bg-blue-600 ">yo</button></li>
-                    <li><button class="w-24 bg-blue-500 rounded-full">estudios</button></li>
-                    <li><button class="w-24 bg-blue-500 rounded-full">habilidades</button></li>
-                    <li><button class="w-24 btn btn-blue">proyectos</button></li>
-                </ul>
-            </div>    
         </div>
-        <!-- #CONTENIDO   -->
-        <div class="bg-blue-400  w-3/4 text-center">
-            <div id="yo" class="h-3/4 bg-red-400">
-                example1
-            </div>
-            <div id="estudios" class="h-3/4 bg-green-400">
-                example2
-            </div>
-            <div id="habilidades" class="h-3/4 bg-yellow-400"> 
-                example3
-            </div>
-            <div id="proyectos" class="h-3/4 bg-violet-400">
-                example4
-            </div>
+        <!-- Contenido principal -->
+        <div class="cont lg:col-span-6 text-center bg-gradient-to-r from-cyan-600 to-blue-500 font-mono">
+            <section id="yo" class="h-[100vh] grid grid-cols-2 flex justify-center items-center fade-in">
+                <div class="col-span-1 opacity-0 transition-opacity duration-1000 mt-0">
+                    <h1>Osmel Alvarez</h1>
+                    <h1>Edad: 23 años</h1>
+                    <h1>Nacionalidad: Venezuela</h1>
+                    <p>apasionado por aprender nuevas habilidades laborales siempre atento con cada cambio y que se puede mejorar,
+                        me gustan los detalles aunque no sean tan importantes pienso que al menos algo se tiene que ver bien 
+                        ya que no soy tan bueno redactando
+                    </p>
+                </div>
+                <img src="./img/osmel.png" alt="no soy mucho de tomarme foyos y esta fue la mas decente que encontre" class="col-span-1 opacity-0 transition-opacity duration-1000">
+            </section>
+            <section id="estudios" class="h-[100vh] fade-in flex flex-row  justify-center items-center text-xl fade-in grid grid-rows-2">
+                <div class="opacity-0 transition-opacity duration-1000 grid grid-cols-2 row-span-1">
+                    <a href="https://sites.google.com/view/planuptjaacontingencia/página-principal">
+                        <img src="./img/uptjaa.png" alt="" class="col-span-1">
+                    </a>
+                    <h1 class="col-span-1">4 semestres mencion informatica</h1>
+                </div>
+                <div class="opacity-0 transition-opacity duration-1000 grid grid-cols-2 row-span-1">
+                    <a href="https://iutaplc.com/portal/">
+                        <img src="./img/iuta.png" alt="" class="col-span-1">
+                    </a>
+                    <h1 class="col-span-1">TSU mencion informatica</h1>
+                </div>
+            </section>
+            <section id="habilidades" class="h-[100vh] fade-in opacity-0 transition-opacity duration-1000 grid grid-cols-2 flex justify-center items-center flex-cols">
+                <div class="flex justify-items-end grid grid-cols-2 ">
+                    <img src="./img/html.png" alt="html" class="h-32 w-32 col-span-1">
+                    <p class="col-span-1">manejo basico del lenguaje etiquetado html</p>
+                </div>
+                <div class="flex justify-items-center grid grid-cols-2 ">
+                    <img src="./img/css.svg" alt="css" class="h-32 w-32 col-span-1">
+                    <p class="col-sapn-1">manejo medio del leguaje en cascada css</p>
+                </div>
+                <div class="flex justify-items-end grid grid-cols-2 ">
+                    <img src="./img/js.png" alt="js" class="h-32 w-32 col-span-1">
+                    <p class="col-sapn-1">manejo basico java scrip</p>
+                </div>
+                <div class="flex justify-items-center grid grid-cols-2 ">
+                    <img src="./img/Python.png" alt="python" class="h-32 w-32 col-span-1">
+                    <p class="col-sapn-1">manejo basico del lenguaje python</p>
+                </div>
+                <div class="flex justify-items-end grid grid-cols-2 ">
+                    <img src="./img/servicio.jpg" alt="servicio tecino" class="h-32 w-32 col-span-1 rounded-full">
+                    <p class="col-sapn-1">tecnico basico de servicio tecnico</p>
+                </div>
+                <div class="flex justify-items-center grid grid-cols-2 ">
+                    <img src="./img/tailwind.png" alt="tailwind" class="h-32 w-32 col-span-1">
+                    <p class="col-sapn-1">aprendiendo tailwind</p>
+                </div>
+            </section>
+            <section id="proyectos" class="flex flex-col lg:flex-row justify-between items-center h-auto bg-gradient-to-r from-sky-900 to-cyan-300 text-xl fade-in gap-6">
+                <!-- Proyecto de YouTube -->
+                <div class="relative z-10 h-auto lg:h-48 w-full lg:w-5/6 opacity-0 transition-opacity duration-1000 mb-4">
+                    <a href="#">
+                        <h1 class="text-xl font-bold">Página que simula ser YouTube</h1>
+                        <img src="./img/youtube.png" alt="" class="w-full">
+                    </a>
+                </div>
+                <!-- Proyecto del Sistema Solar -->
+                <div class="relative z-10 flex justify-center items-center opacity-0 transition-opacity duration-1000 mb-6 lg:mb-0">
+                    <a href="#" class="text-center">
+                        <div id="descripcion" class="text-center text-xl mb-4">
+                            <h1>Blog del Sistema Solar</h1>
+                            <p>En proceso de mejora</p>
+                        </div>
+                        <div class="relative flex justify-center items-center w-[40em] h-[40em]">
+                            <div class="sun"></div>
+                            <div class="earth">
+                                <div class="moon"></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
         </div>
     </div>
 </body>
+<script>
+    const proyectos = document.getElementById('proyectos');
+
+
+    function createStar(x, y) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.top = `${y}px`;
+        star.style.left = `${x}px`;
+        proyectos.appendChild(star);
+
+
+        setTimeout(() => {
+            star.remove();
+        }, 8000);
+    }
+
+
+    proyectos.addEventListener('click', (e) => {
+        createStar(e.clientX, e.clientY);
+    });
+
+
+    setInterval(() => {
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        createStar(x, y);
+    }, 500);
+     // secciones
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100');
+                entry.target.classList.remove('opacity-0');
+            } else {
+                entry.target.classList.remove('opacity-100');
+                entry.target.classList.add('opacity-0');
+            }
+        });
+    });
+
+    // elementos con la clase 'fade-in'
+    document.querySelectorAll('.fade-in').forEach(section => {
+        observer.observe(section);
+    });
+
+    // (imágenes, divs, etc.)
+    document.querySelectorAll('.fade-in > *').forEach(child => {
+        observer.observe(child);
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        const texts = document.querySelectorAll("h1, p");
+        texts.forEach((text) => {
+            typeWriter(text);
+        });
+    });
+
+    function typeWriter(element) {
+        const text = element.innerHTML;
+        element.innerHTML = "";
+        let i = 0;
+        const speed = 50;
+
+        function addLetter() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(addLetter, speed);
+            }
+        }
+
+        addLetter();
+    }
+</script>
+
 </html>
